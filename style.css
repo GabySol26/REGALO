@@ -1,0 +1,210 @@
+body
+ {
+    background-image: url("images/fondo.gif");
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+    animation-duration: 5s;
+    animation-name: animacion;
+}
+
+/*PARTE 1*/
+.parte1
+{
+    color: white;
+    text-align: center;
+}
+
+.title
+{
+    height: 200px;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.48);
+    position: center;
+    margin: 0 auto;
+
+}
+.window
+{
+    background-color: rgba(206, 243, 193, 0.48);
+    height: 550px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.btns
+{
+    display: flex;
+}
+.btn1
+{
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow:
+            0 0 0 0 rgba(227,61,135,0.5),
+            0 0 0 0 rgba(66,168,183,0.5);
+    transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+    font-family: 'Permanent Marker', cursive;
+    animation-duration: 5s;
+    animation-name: animacion;
+}
+.btn1::after
+{
+    content: "";
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #70CDDF;
+    background-image:
+    linear-gradient(225deg, #D09CA8 0%, #64CBDC 50%, #F26979 100%);
+    z-index: -50;
+    transition: transform 0.5s ease;
+}
+.btn1:hover
+{
+    transform: translate(0,-6px);
+    box-shadow:
+            10px -10px 25px 0 rgba(227,61,135,0.5),
+            -10px 10px 25px 0 rgba(66,168,183,0.5);
+}
+.btn:hover::after
+{
+    transform: rotate(150deg);
+}
+/*fuentes*/
+@font-face
+{
+    font-family: Triforce;
+    src: url("fuentes/Triforce.ttf");
+}
+
+/*animacion*/
+.min-title
+{
+    font-family: Triforce, cursive;
+    font-size: 90px;
+    margin: 20px;
+    background: linear-gradient(red,black);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation-duration: 5s;
+    animation-name: animacion;
+}
+@keyframes animacion
+{
+    from
+    {
+        margin-left: 100%;
+    }
+    to
+    {
+        margin-left: 0;
+    }
+}
+/*FIN DE LA PARTE 1*/
+
+/*PARTE 2*/
+.carrousel
+{
+    margin: auto;
+    width: 800px;
+    height: 530px;
+    padding:30px;
+}
+ul,li
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.slider
+{
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+ul.slider li img{
+    width: 100%;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.menu{
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background-color: #70CDDF;
+    background-image:
+            linear-gradient(225deg, #64CBDC 50%, #F26979 100%);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+/*FIN DE LA PARTE 2*/
+
+/*PARTE 3*/
+.description
+{
+    font-size:28px;
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(#FCD00D,red);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    text-align: justify;
+}
+.description1
+{
+    font-size:28px;
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(#FCD00D,red);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    text-align: center;
+    margin: 0;
+}
+/*FIN DE LA PARTE 3*/
